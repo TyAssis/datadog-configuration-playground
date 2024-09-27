@@ -1,0 +1,36 @@
+[
+  {
+    "service": "apijs",
+    "source": "nodejs",
+    "log_processing_rules": [
+      {
+        "type": "exclude_at_match",
+        "name": "no-todo",
+        "pattern": "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z\\sTODO"
+      },
+      {
+        "type": "exclude_at_match",
+        "name": "no-ipv4",
+        "pattern": "\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z\\s\\d+.\\d+.\\d+.\\d+"
+      },
+      {
+        "type": "exclude_at_match",
+        "name": "no-email",
+        "pattern": "\\w+@arena.im"
+      },
+      {
+        "type": "exclude_at_match",
+        "name": "no-single-word-error",
+        "pattern": "^Error$"
+      }, {
+        "type": "exclude_at_match",
+        "name": "no-method",
+        "pattern": "^GET"
+      }, {
+        "type": "exclude_at_match",
+        "name": "no-object-object",
+        "pattern": "object\\sObject"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+[{
+  "service": "apijs",
+  "source": "nodejs",
+  "log_processing_rules": [{
+    "type": "multi_line",
+    "name": "no-multiline",
+    "pattern": "This\\sis\\san"
+  }]
+}]

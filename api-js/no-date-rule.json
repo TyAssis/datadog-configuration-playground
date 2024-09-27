@@ -1,0 +1,9 @@
+[{
+  "service": "apijs",
+  "source": "nodejs",
+  "log_processing_rules": [{
+    "type": "exclude_at_match",
+    "name": "no-date-logs",
+    "pattern": "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z"
+  }]
+}]
